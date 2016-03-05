@@ -1,0 +1,16 @@
+   <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+
+             <p style="color:white;">
+    <strong>id</strong>: {{user._id}}<br>
+    <strong>email</strong>: {{user.local.email}}<br>
+    <strong>password</strong>:{{user.local.password}}
+</p>
+
+<p> Edit Test </p>
+    <form action="/edit" method="post">
+        <div class="form-group"> 
+            <input type="text" class="form-control" name="email" placeholder="email">
+        </div>
+        <button type="submit" class="btn btn-primary btn-md outline">Edit User</button>
+    </form>

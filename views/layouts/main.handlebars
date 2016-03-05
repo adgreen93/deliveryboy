@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Example App</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="css/style.css">
+
+      <script>
+        jQuery(function () {
+    var $els = $('div[id^=quote]'),
+        i = 0,
+        len = $els.length;
+
+    $els.slice(1).hide();
+    setInterval(function () {
+        $els.eq(i).fadeOut(function () {
+            i = (i + 1) % len
+            $els.eq(i).fadeIn();
+        })
+    }, 5000)
+});
+</script>
+</head>
+<body>
+
+    {{{body}}}
+
+</body>
+</html>
