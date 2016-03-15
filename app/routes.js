@@ -1,5 +1,6 @@
 module.exports = function(app, passport) {
 	var User = require('./models/user.js');
+	var multer = require('multer');
 
 	app.get('/', function(req, res){
 		res.render('home');
@@ -68,6 +69,12 @@ module.exports = function(app, passport) {
           res.render('index', { users: users});
      		});
 	   });
+
+		app.post('/upload', multer({  dest: 'public/uploads/'}).single('image'), function(req,res){
+		 //form fields
+		});
+
+
 };
 
 //middleware to make sure a user is loggin in 

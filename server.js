@@ -6,13 +6,14 @@ var port = process.env.PORT || 3000;
 var mongoose = require('mongoose');
 var passport = require('passport');
 var flash = require('connect-flash');
-
+var multer = require('multer');
 //makes log comments readable 
 var morgan = require('morgan');
 
 //enables you to set cookies and take data from html form 
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+
 //sets up sessions(users are logged in across pages until logged out)
 var session = require('express-session');
 
@@ -20,7 +21,6 @@ var session = require('express-session');
 var exphbs  = require('express-handlebars');
 
 //sets up database
-
 var configDB = require('./config/database.js');
 
 //connects to database 
@@ -40,8 +40,6 @@ app.use(bodyParser.json()); // get information from html forms
  // set up handlebars for templating
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
-
-
 
 // required for passport
 app.use(session({ 

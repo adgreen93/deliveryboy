@@ -4,11 +4,12 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	padding-top: 70px;
-	background-image: url('/img/background1.jpg');
+  background-image: url('/img/background4.jpg');
     background-repeat: no-repeat;
      -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+ 
 }
 
 .btn.outline {
@@ -30,6 +31,7 @@ body {
     color: #007299;
     box-shadow: none;
 }
+
 /* media queries */
 
 @media (min-width: @screen-sm-min) { 
