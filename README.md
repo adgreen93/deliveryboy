@@ -1,6 +1,8 @@
 # authapp
 basic application with users made with Node, Express, Passport &amp; MongoDB 
 
+![howdy](/rollingstonelogo.png)
+
 This is a basic web app that has users that can be authenticated locally with an encrpyted password. I uploaded this because
 it's a useful boilerplate if you want to build an application with Node & Express and want to dive into the more complex stuff.
 
