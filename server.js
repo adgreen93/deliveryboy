@@ -1,4 +1,4 @@
-
+require('dotenv').config();
 
 var express = require('express');
 var app = express();
@@ -9,7 +9,7 @@ var flash = require('connect-flash');
 var multer = require('multer');
 //makes log comments readable 
 var morgan = require('morgan');
-
+var stripe = require('stripe');
 //enables you to set cookies and take data from html form 
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -35,6 +35,8 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(express.static(__dirname + '/public'));
+
+
 app.use(bodyParser.json()); // get information from html forms
 
  // set up handlebars for templating

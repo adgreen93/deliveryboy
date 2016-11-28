@@ -1,0 +1,57 @@
+
+
+   <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#F63440; ">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/profile" style="color:white;">Kosher2me</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/restaurants" style="color:white;">Restaurants</a></li>
+         <li><a href="/profile" style="color:white;">Your Profile</a></li>
+         <li><a href="/build" style="color:white;">Create Restaurant</a></li>
+         <li><a href="/products" style="color:white;">Create Menu</a></li>
+  	
+
+      </ul>
+     
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" style="color:white;"> {{user.local.email}} </a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container-fluid">
+<div class="row">
+
+	<div class="col-md-3">
+		
+	</div>
+		<div class="col-md-7">
+
+
+<h1> Restaurants Near You </h1>
+<hr>
+
+{{#each restaurants}} 
+<div class="panel panel-default">
+<h1> {{restaurantName }} </h1>
+<p> {{restaurantLocation }} </p>
+<a href="{{restaurantWebsite}}"><p>Website</p> </a>
+<a href="/restaurants/{{_id}}"><p>See Restaurant(via restaurant id) </p></a>
+</div>
+{{/each}}
+</div>
+</div>
+
+</div>

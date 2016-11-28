@@ -1,5 +1,5 @@
 module.exports = {
 
-    'url' : 'your database uri here' 
+    'url' : 'mongodb://localhost' 
 
 };

@@ -1,0 +1,74 @@
+
+
+   <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#F63440; ">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/profile" style="color:white;">Kosher2me</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/restaurants" style="color:white;">Restaurants</a></li>
+         <li><a href="/profile" style="color:white;">Your Profile</a></li>
+  
+
+      </ul>
+     
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"> {{user.local.email}} </a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="container">
+<div class="row">
+
+	<div class="col-md-8 col-md-offset-2">
+
+<h1> Create New Menu Item </h1>
+<form action="/products" method="post">
+        <div class="form-group">
+            <label>Product Name</label>
+            <input type="text" class="form-control" name="name">
+        </div>
+        <div class="form-group">
+            <label>Product Description</label>
+            <input type="text" class="form-control" name="description">
+        </div>
+        <div class="form-group">
+            <label>Product Price</label>
+            <input type="text" class="form-control" name="price">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-md outline" >Add to Menu</button>
+</form>
+
+<h1> Menu </h1>
+<hr>
+{{#each products}} 
+<h1> {{productName }} </h1>
+    <p>Description: {{ productDescription }}</p>
+    <p>Price: ${{ productPrice }}</p>
+
+    	<a href="/products/{{_id}}"><p> View Product </p></a>
+     <form action="/products/{{_id}}" method="delete">
+
+        <button type="submit" class="btn btn-primary btn-md outline">Delete Product</button>
+       
+    </form>
+   <hr>
+{{/each}}
+</div>
+</div>
+
+</div>
+
+

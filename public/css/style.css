@@ -1,14 +1,15 @@
 
-
-
 body {
 	font-family: 'Roboto', sans-serif;
 	padding-top: 70px;
-  background-image: url('/img/background4.jpg');
+  background-color: #fff;
+  color:black;
     background-repeat: no-repeat;
      -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+
+
  
 }
 
@@ -18,8 +19,8 @@ body {
 }
 
 .btn-primary.outline {
-    border: 3px solid white;
-    color: white;
+    border: 3px solid #00adef;
+    color: #00adef;
 }
 
 .btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
