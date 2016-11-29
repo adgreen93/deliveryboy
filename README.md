@@ -1,6 +1,5 @@
-# Rolling Stone Auth App
-basic application with users made with Node, Express, Passport &amp; MongoDB 
+# Deliverboy - A Seamless clone.
 
+Built with Node & Express, Passport for User Auth, MongoDB as the DB, Stripe as the credit card processor.
 
-
-First steps to building a seamless clone. Once completed, this can be factored out to people...
+In progress.
